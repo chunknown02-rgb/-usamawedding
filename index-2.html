@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#03180f">
+  <meta name="description" content="The wedding celebrations of M. Usama Iqbal — Mehndi, Barat and Walima.">
+  <title>M. Usama Iqbal | Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #03180f;
+      --green2: #082719;
+      --gold: #e8bd62;
+      --gold-light: #ffe5a0;
+      --cream: #fff8e9;
+      --muted: #dfd2b8;
+      --line: rgba(232,189,98,.62);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--cream); background:
+        radial-gradient(ellipse at 50% 0%, #17452b 0, transparent 42%),
+        linear-gradient(135deg, #010b07, var(--green) 55%, #010a06);
+      font-family: "Cormorant Garamond", Georgia, serif;
+    }
+    body::before {
+      content: ""; position: fixed; inset: 0; pointer-events: none; opacity: .12; z-index: -1;
+      background-image: radial-gradient(var(--gold) .6px, transparent .6px);
+      background-size: 13px 13px;
+    }
+    .topbar {
+      position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between;
+      align-items: center; gap: 12px; padding: 12px clamp(14px,4vw,48px);
+      background: rgba(2,17,10,.88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line);
+    }
+    .brand { color: var(--gold-light); font-family: "Playfair Display",serif; letter-spacing: .08em; font-size: .9rem; }
+    .nav { display:flex; gap: clamp(8px,2vw,22px); flex-wrap: wrap; }
+    .nav a { color: var(--cream); text-decoration:none; font-size: .98rem; }
+    .nav a:hover { color: var(--gold-light); }
+    .music-btn {
+      border: 1px solid var(--gold); background: transparent; color: var(--gold-light); border-radius: 99px;
+      padding: 8px 13px; font: inherit; cursor: pointer; white-space: nowrap;
+    }
+    .hero { text-align:center; padding: 76px 20px 44px; }
+    .eyebrow { color: var(--gold); letter-spacing: .32em; text-transform: uppercase; font-size: .82rem; }
+    .bismillah { color: var(--gold-light); font-size: 2rem; margin: 18px 0 10px; }
+    h1 { font: 400 clamp(2.6rem,8vw,6.6rem)/1.03 "Great Vibes", cursive; color: var(--gold-light); margin: 10px 0; text-shadow: 0 0 24px #d79b3b38; }
+    .hero p { font-size: clamp(1.05rem,2.3vw,1.4rem); color: var(--muted); margin: 12px auto; max-width: 660px; }
+    .ornament { display:flex; align-items:center; justify-content:center; gap:12px; color:var(--gold); margin: 22px auto; max-width:300px; }
+    .ornament::before,.ornament::after { content:""; height:1px; flex:1; background:linear-gradient(90deg,transparent,var(--gold)); }
+    .ornament::after { background:linear-gradient(90deg,var(--gold),transparent); }
+    .countdown { display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-top:28px; }
+    .countbox { min-width:72px; padding:10px 13px; border:1px solid var(--line); border-radius:10px; background:#03180fb8; }
+    .countbox strong { display:block; font:600 1.55rem "Playfair Display",serif; color:var(--gold-light); }
+    .countbox span { font-size:.75rem; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); }
+    .events { width:min(1200px,92%); margin: 12px auto 72px; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; align-items:stretch; }
+    .card {
+      position:relative; overflow:hidden; padding: 30px 22px 25px; text-align:center;
+      background:linear-gradient(160deg,rgba(10,49,29,.96),rgba(1,15,9,.98) 65%);
+      border:1px solid var(--gold); outline:1px solid #a8752d; outline-offset:-7px;
+      box-shadow:0 20px 55px #0007; border-radius:3px; isolation:isolate;
+    }
+    .card::before,.card::after { content:"❧"; position:absolute; color:#d6ad57; opacity:.35; font-size:3rem; z-index:-1; }
+    .card::before { top:7px; left:10px; transform:rotate(-30deg); }
+    .card::after { bottom:7px; right:10px; transform:rotate(150deg); }
+    .event-icon { color:var(--gold); font-size:1.65rem; margin-bottom:5px; }
+    .event-title { font:600 clamp(2rem,3vw,3rem) "Playfair Display",serif; color:var(--gold-light); letter-spacing:.06em; margin:4px 0 13px; }
+    .hosts { font-size:1.18rem; color:var(--gold-light); margin:0 0 7px; }
+    .invite { color:var(--muted); font-size:1.08rem; line-height:1.35; margin:0 auto 15px; max-width:320px; }
+    .groom-name { font:400 clamp(2.3rem,4vw,3.3rem)/1.08 "Great Vibes",cursive; color:var(--gold-light); margin:20px 0 8px; }
+    .small-label { color:var(--gold); letter-spacing:.19em; text-transform:uppercase; font-size:.77rem; margin:16px 0 10px; }
+    .rule { height:1px; width:72%; margin:14px auto; background:linear-gradient(90deg,transparent,var(--gold),transparent); }
+    .schedule { text-align:left; margin:0 auto; max-width:340px; }
+    .schedule-row { display:grid; grid-template-columns:26px 1fr auto; gap:8px; align-items:start; padding:5px 0; font-size:1.06rem; line-height:1.2; }
+    .schedule-row .emoji { color:var(--gold); }
+    .schedule-row .time { color:var(--gold-light); white-space:nowrap; }
+    .venue { font-size:1.13rem; line-height:1.25; }
+    .venue strong { display:block; color:var(--cream); font-weight:600; }
+    .looking { color:var(--muted); line-height:1.4; font-size:1rem; }
+    .family { color:var(--cream); font-size:1.02rem; line-height:1.4; }
+    .name-box { display:inline-block; padding:9px 18px; border:1px solid var(--line); border-radius:16px; color:var(--gold-light); font-size:1.25rem; }
+    .children { font:italic 1.55rem "Great Vibes",cursive; color:var(--gold-light); }
+    .rsvp { border:1px solid var(--line); border-radius:20px; display:inline-block; padding:8px 12px; margin-top:14px; font-size:.92rem; color:var(--cream); }
+    .rsvp b { display:block; letter-spacing:.16em; color:var(--gold-light); font-size:.76rem; margin-bottom:4px; }
+    .footer { text-align:center; padding:28px 15px 40px; border-top:1px solid #d5a64d45; color:var(--muted); }
+    .footer .signature { font:2.3rem "Great Vibes",cursive; color:var(--gold-light); margin:7px 0; }
+    .backtop { color:var(--gold-light); text-decoration:none; }
+    @media(max-width:900px) { .events { grid-template-columns:1fr; max-width:570px; } .card { padding:34px 26px; } .event-title { font-size:2.8rem; } .groom-name { font-size:3.4rem; } }
+    @media(max-width:520px) {
+      .topbar { flex-wrap:wrap; justify-content:center; }
+      .brand { width:100%; text-align:center; }
+      .nav { justify-content:center; }
+      .hero { padding-top:50px; }
+      .card { padding:30px 17px; }
+      .schedule-row { font-size:1rem; grid-template-columns:23px 1fr auto; gap:6px; }
+      .schedule-row .time { font-size:.95rem; }
+    }
+    @media(prefers-reduced-motion:reduce) { html{scroll-behavior:auto} *{animation:none!important;transition:none!important} }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">THE WEDDING CELEBRATIONS</div>
+    <nav class="nav" aria-label="Wedding events">
+      <a href="#mehndi">Mehndi</a><a href="#barat">Barat</a><a href="#walima">Walima</a>
+    </nav>
+    <button class="music-btn" id="musicToggle" type="button" aria-pressed="false">♫ Play Music</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">With the blessings of Allah</div>
+      <div class="bismillah" aria-label="Bismillah">﷽</div>
+      <h1>M. Usama Iqbal</h1>
+      <div class="ornament">✦ ❦ ✦</div>
+      <p>Mr. &amp; Mrs. M. Iqbal request the pleasure of your company as we celebrate the wedding festivities of our beloved son.</p>
+      <p style="color:var(--gold-light)">Your presence will make our celebrations even more special.</p>
+      <div class="countdown" aria-label="Countdown to the Mehndi ceremony">
+        <div class="countbox"><strong id="days">--</strong><span>Days</span></div>
+        <div class="countbox"><strong id="hours">--</strong><span>Hours</span></div>
+        <div class="countbox"><strong id="minutes">--</strong><span>Minutes</span></div>
+        <div class="countbox"><strong id="seconds">--</strong><span>Seconds</span></div>
+      </div>
+      <p style="font-size:.92rem;margin-top:12px">First celebration · Friday, 6 November 2026</p>
+    </section>
+
+    <section class="events" aria-label="Wedding invitation cards">
+      <article class="card" id="mehndi">
+        <div class="event-icon">❋</div>
+        <h2 class="event-title">MEHNDI</h2>
+        <p class="hosts">Mr. &amp; Mrs. M. Iqbal</p>
+        <p class="invite">cordially invite you to celebrate the “Mehndi” ceremony of their beloved son</p>
+        <div class="groom-name">M. Usama Iqbal</div>
+        <div class="rule"></div>
+        <div class="small-label">Programme, Insha’Allah</div>
+        <div class="schedule">
+          <div class="schedule-row"><span class="emoji">▦</span><span>Friday, 6<sup>th</sup> November 2026</span><span></span></div>
+          <div class="schedule-row"><span class="emoji">✿</span><span>Mehndi Ceremony</span><span class="time">7:00 PM</span></div>
+          <div class="schedule-row"><span class="emoji">☕</span><span>Refreshments</span><span class="time">8:00 PM</span></div>
+        </div>
+        <div class="rule"></div>
+        <div class="small-label">Venue</div>
+        <div class="venue"><strong>Zam Zam Marriage Hall</strong>Main GT Road, Lalamusa</div>
+        <div class="rule"></div>
+        <div class="small-label">Groom</div>
+        <div class="name-box">M. Usama Iqbal</div>
+        <div class="small-label">Their beloved children</div>
+        <div class="children">Musfirah, Zimal &amp; Affan</div>
+        <div class="rsvp"><b>RSVP</b>0303-9807125 &nbsp;|&nbsp; 0334-8788799</div>
+      </article>
+
+      <article class="card" id="barat">
+        <div class="event-icon">❋</div>
+        <h2 class="event-title">BARAT</h2>
+        <p class="hosts">Mr. &amp; Mrs. M. Usama Iqbal</p>
+        <p class="invite">solicit your gracious presence on the occasion of the Barat ceremony of their beloved son</p>
+        <div class="groom-name">M. Usama Iqbal</div>
+        <div class="rule"></div>
+        <div class="small-label">Programme, Insha’Allah</div>
+        <div class="schedule">
+          <div class="schedule-row"><span class="emoji">▦</span><span>Saturday, 7<sup>th</sup> November 2026</span><span></span></div>
+          <div class="schedule-row"><span class="emoji">✺</span><span>Sehra Bandi</span><span class="time">12:00 PM</span></div>
+          <div class="schedule-row"><span class="emoji">🚘</span><span>Departure of Barat</span><span class="time">1:00 PM</span></div>
+          <div class="schedule-row"><span class="emoji">♧</span><span>Nikah</span><span class="time">2:00 PM</span></div>
+          <div class="schedule-row"><span class="emoji">◉</span><span>Dinner</span><span class="time">3:00 PM</span></div>
+          <div class="schedule-row"><span class="emoji">❧</span><span>Rukhsati</span><span class="time">4:00 PM</span></div>
+        </div>
+        <div class="rule"></div>
+        <div class="small-label">Venue</div>
+        <div class="venue"><strong>Zam Zam Marriage Hall</strong>Main GT Road, Lalamusa</div>
+        <div class="rule"></div>
+        <div class="small-label">Looking Forward</div>
+        <div class="looking">Mr. &amp; Mrs. M. Usama Iqbal<br>Mr. &amp; Mrs. Shahbaz Iqbal<br>Mr. &amp; Mrs. Abdul Rehman Iqbal</div>
+        <div class="rsvp"><b>RSVP</b>0300-6233078 &nbsp;|&nbsp; 0303-9807125 &nbsp;|&nbsp; 0334-8788799</div>
+      </article>
+
+      <article class="card" id="walima">
+        <div class="event-icon">❋</div>
+        <h2 class="event-title">WALIMA</h2>
+        <p class="hosts">Mr. &amp; Mrs. M. Usama Iqbal</p>
+        <p class="invite">cordially request the pleasure of your company on the Walima ceremony of their beloved son</p>
+        <div class="groom-name">M. Usama Iqbal</div>
+        <div class="rule"></div>
+        <div class="small-label">Programme, Insha’Allah</div>
+        <div class="schedule">
+          <div class="schedule-row"><span class="emoji">▦</span><span>Sunday, 8<sup>th</sup> November 2026</span><span></span></div>
+          <div class="schedule-row"><span class="emoji">♨</span><span>Dinner</span><span class="time">8:00 PM</span></div>
+        </div>
+        <div class="rule"></div>
+        <div class="small-label">Venue</div>
+        <div class="venue"><strong>Zam Zam Restaurant</strong>Main GT Road, Lalamusa</div>
+        <div class="rule"></div>
+        <div class="small-label">Looking Forward</div>
+        <div class="looking">Mr. &amp; Mrs. M. Usama Iqbal<br>Mr. &amp; Mrs. Shahbaz Iqbal<br>Mr. &amp; Mrs. Abdul Rehman Iqbal</div>
+        <div class="rsvp"><b>RSVP</b>0300-6233078 &nbsp;|&nbsp; 0303-9807125 &nbsp;|&nbsp; 0334-8788799</div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="eyebrow">Together with our families</div>
+    <div class="signature">M. Usama Iqbal</div>
+    <p>We look forward to celebrating these beautiful moments with you.</p>
+    <a class="backtop" href="#">Back to top ↑</a>
+  </footer>
+
+  <!-- Optional music: upload a royalty-free MP3 named "wedding-music.mp3" beside this file. -->
+  <audio id="weddingMusic" loop preload="none">
+    <source src="wedding-music.mp3" type="audio/mpeg">
+  </audio>
+  <script>
+    // Countdown to the Mehndi ceremony (Pakistan Standard Time, UTC+05:00).
+    const eventDate = new Date("2026-11-06T19:00:00+05:00").getTime();
+    function updateCountdown() {
+      const distance = eventDate - Date.now();
+      if (distance <= 0) {
+        ["days","hours","minutes","seconds"].forEach(id => document.getElementById(id).textContent = "0");
+        return;
+      }
+      document.getElementById("days").textContent = Math.floor(distance / 86400000);
+      document.getElementById("hours").textContent = Math.floor((distance % 86400000) / 3600000);
+      document.getElementById("minutes").textContent = Math.floor((distance % 3600000) / 60000);
+      document.getElementById("seconds").textContent = Math.floor((distance % 60000) / 1000);
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    const music = document.getElementById("weddingMusic");
+    const musicToggle = document.getElementById("musicToggle");
+    musicToggle.addEventListener("click", async () => {
+      if (music.paused) {
+        try {
+          await music.play();
+          musicToggle.textContent = "♫ Pause Music";
+          musicToggle.setAttribute("aria-pressed", "true");
+        } catch (error) {
+          alert('Music file not found. Add a royalty-free MP3 named "wedding-music.mp3" in the same folder as index.html.');
+        }
+      } else {
+        music.pause();
+        musicToggle.textContent = "♫ Play Music";
+        musicToggle.setAttribute("aria-pressed", "false");
+      }
+    });
+  </script>
+</body>
+</html>
